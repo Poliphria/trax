@@ -1,8 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
-const bcrypt = require('bcrypt');
 const statesArray = require('../statesArray');
-const saltRounds = 10;
 
 
 /**
