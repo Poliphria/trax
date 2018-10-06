@@ -11,4 +11,4 @@ const sitesSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('Sites', sitesSchema);
+module.exports = mongoose.model('Site', sitesSchema);

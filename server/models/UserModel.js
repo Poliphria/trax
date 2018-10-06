@@ -11,13 +11,25 @@ const statesArray = require('../statesArray');
 let userSchema = new Schema({
     email: {type: String, require: true},
     password: {type: String, required: true},
+    admin: {
+        isAdmin: {type: Boolean, required:true},
+        adminOf: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "Site"
+            }
+        ]
+    },
     address: {
-        street: {type: String},
-        city: {type: String},
-        enum: statesArray,
-        zip: {type: String},
+        type: Schema.Types.ObjectId,
+        ref: "Address"
     },
     favoriteStores: [
-        
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Site"
+        }
     ]
 })
+
+module.exports = mongoose.model("User", userSchema);
