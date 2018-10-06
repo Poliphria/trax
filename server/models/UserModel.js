@@ -17,7 +17,7 @@ let userSchema = new Schema({
         street: {type: String},
         city: {type: String},
         enum: statesArray,
-        zip: {type: Number},
+        zip: {type: String},
     },
     favoriteStores: [
         
