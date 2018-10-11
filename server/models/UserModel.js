@@ -12,7 +12,7 @@ let userSchema = new Schema({
     email: {type: String, require: true},
     password: {type: String, required: true},
     admin: {
-        isAdmin: {type: Boolean, required:true},
+        isAdmin: {type: Boolean},
         adminOf: [
             {
                 type: Schema.Types.ObjectId,
